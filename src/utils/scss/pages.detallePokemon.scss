@@ -1,0 +1,71 @@
+@import './config.scss';
+
+.contenedor {
+    width: 100%;
+    
+    .detail_pokemon {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 25px;
+
+        .imagen {
+            background-color: $colorBackgroundPokemon;
+            border: 25px solid $colorLineBarPokemon;
+            width: 300px;
+            min-height: 300px;
+            border-radius: 5px;
+            position: relative;
+            
+            img {
+                width: 100%;
+            }
+
+            .tipo {
+                width: 100%;
+                position: absolute;
+                bottom: 48px;
+                text-align: center;
+                a {
+                    background-color: $colorBackgroundType;
+                    color: white;
+                    margin: 0 15px;
+                    padding: 8px 15px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .description {
+            min-width: 200px;
+            .stats {
+                
+                .group__stats {
+                    text-align: left;
+                }
+            }
+        }
+
+        .group_moves {
+            width: 100%;
+            text-align: left;
+
+            .list__moves {
+                display: flex;
+                flex-wrap: wrap;
+                .item__move {
+                    margin: 0 35px 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1400px){
+    .contenedor {
+        .detail_pokemon {
+            width: 1300px;
+        }
+    }
+}

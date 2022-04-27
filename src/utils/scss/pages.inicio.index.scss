@@ -1,0 +1,132 @@
+@import './config.scss';
+
+body {
+    //rgb(70, 70, 70)
+    background-color: $colorBackground;
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .total__search {
+        width: 80%;
+        text-align: start;
+        p { margin-bottom: 0; }
+    }
+
+    .contenedor__listado {
+        justify-content: center;
+        min-height: 200px;
+        flex-wrap: wrap;
+        display: flex;
+        width: 80%;
+        margin-top: 40px;
+
+        .item__listado {
+            background-color: $colorItemListadoPokemon;
+            box-shadow: 0px 0px 5px 0px black;
+            margin: 0 20px 40px 20px;
+            justify-content: center;
+            text-decoration: none;
+            align-items: center;
+            border-radius: 5px;
+            display: flex;
+            height: 200px;
+            width: 300px;
+
+            .block-texto {
+                width: 100px;
+                height: 150px;
+                display: flex;
+                position: relative;
+                justify-content: center;
+                flex-direction: column;
+                
+                h3, p {
+                    margin: 0;
+                }
+
+                h3 {
+                    color: $colorTextoNombrePokemon;
+                    font-size: 15px;
+                    margin-left: 5px;
+                    text-align: left;
+                }
+
+                a {
+                    position: absolute;
+                    bottom: 15px;
+                    left: 7px;
+                    background-color: $colorLinkPokemon;
+                    padding: 7.5px 10px;
+                    border-radius: 5px;
+                    color: $colorTextoLinkPokemon;
+                }
+            }
+
+            img {
+                height: 150px;
+                width: 150px;
+                border-radius: 20px;
+                background-color: $colorImagenPokemon;
+            }
+        }
+
+        .item__listado:hover {
+            background-color: $colorItemListadoPokemon_hover;
+            cursor: pointer;
+        }
+    }
+
+    .contenedor__links {
+        width: 80%;
+        margin-bottom: 40px;
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+
+            .link {
+                border: 1px solid $colorBorderLinkListado;
+                padding: 5px 30px;
+                border-radius: 4px;
+                text-decoration: none;
+                color: $colorLinkListado;
+                font-weight: 500;
+                box-shadow: 0px 0px 2px 0px black;
+            }
+        }
+
+        .link__rigth {
+            margin-left: auto;
+        }
+    }
+}
+
+@media(min-width: 1400px){
+    .contenedor {
+        .total__search, .contenedor__listado, .contenedor__links {
+            width: 1300px;
+        }
+    }
+}
+
+@media(max-width: 850px){
+    .contenedor {
+        .total__search, .contenedor__listado, .contenedor__links {
+            width: 90%;
+        }
+    }
+}
+
+@media(max-width: 450px){
+    .contenedor {
+        .total__search, .contenedor__listado, .contenedor__links {
+            width: 95%;
+        }
+    }
+}
